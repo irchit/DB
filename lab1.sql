@@ -1,4 +1,4 @@
-USE [Dogs]
+USE [DBDogs]
 
 CREATE TABLE [Caine] (
   [id] int PRIMARY KEY IDENTITY(1,1),
@@ -90,10 +90,6 @@ CREATE TABLE [HranaCaine] (
   [id_hrana] int,
   PRIMARY KEY ([id_caine], [id_hrana])
 )
-
-ALTER TABLE [Caine] ADD FOREIGN KEY ([mama_id]) REFERENCES [Caine] ([id])
-
-ALTER TABLE [Caine] ADD FOREIGN KEY ([tata_id]) REFERENCES [Caine] ([id])
 
 ALTER TABLE [Caine] ADD FOREIGN KEY ([rasa_id]) REFERENCES [Rasa] ([id])
 

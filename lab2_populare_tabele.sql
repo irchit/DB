@@ -1,4 +1,4 @@
-USE [Dogs]
+USE [DBDogs]
 
 INSERT INTO [Talie] ([tip])
 VALUES
@@ -30,10 +30,10 @@ VALUES
 INSERT INTO [Caine] ([nume], [tata_id], [mama_id], [pret], [rasa_id], [data_nastere], [blana_id])
 VALUES
 -- Bunicii
-('Rex', -1, -1, 900, 1, '2020-01-01', 2),
-('Lola', -1, -1, 850, 1, '2020-01-15', 2),
-('Sam', -1, -1, 950, 1, '2020-02-01', 2),
-('Lily', -1, -1, 800, 1, '2020-02-15', 2),
+('Rex', NULL, NULL, 900, 1, '2020-01-01', 2),
+('Lola', NULL, NULL, 850, 1, '2020-01-15', 2),
+('Sam', NULL, NULL, 950, 1, '2020-02-01', 2),
+('Lily', NULL, NULL, 800, 1, '2020-02-15', 2),
 -- Părinții
 ('Max', 1, 2, 1000, 1, '2021-01-01', 2),
 ('Bella', 3, 4, 950, 1, '2021-01-15', 2),
@@ -42,7 +42,7 @@ VALUES
 ('Luna', 5, 6, 850, 1, '2022-01-01', 2),
 ('Lucky', 5, 6, 950, 1, '2022-01-01', 2),
 -- Bonzo
-('Bonzo', -1, -1, 0, 6, '2020-01-01', 3),
+('Bonzo', NULL, NULL, 0, 6, '2020-01-01', 3),
 -- Copilul lui Bonzo și Bella
 ('Rexy', 10, 6, 50, 6, '2022-01-01', 1);
 
