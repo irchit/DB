@@ -67,7 +67,7 @@ INSERT INTO [CaineDetinator] ([id_caine], [id_detinator], [an_achizitie])
 VALUES
 -- Ion cu Bonzo și Luna
 (10, 1, DATEADD(month, 2, '2020-01-01')), -- Bonzo
-(7, 1, DATEADD(month, 2, '2022-01-01')), -- Luna
+(8, 1, DATEADD(month, 2, '2022-01-01')), -- Luna
 -- Hans cu Rex, Lola, Sam și Lily
 (1, 3, DATEADD(month, 2, '2020-01-01')), -- Rex
 (2, 3, DATEADD(month, 2, '2020-01-15')), -- Lola
