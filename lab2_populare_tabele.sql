@@ -1,3 +1,5 @@
+USE [Dogs]
+
 INSERT INTO [Talie] ([tip])
 VALUES
 ('mare'),
