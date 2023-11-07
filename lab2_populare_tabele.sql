@@ -5,7 +5,7 @@ VALUES
 ('mare'),
 ('medie'),
 ('mică'),
-('necunoscut')
+('necunoscut');
 
 INSERT INTO [Rasa] ([denumire], [talie_id], [tara_origine], [descriere_rasa])
 VALUES
@@ -14,7 +14,7 @@ VALUES
 ('Maltipoo', 3, 'Statele Unite', 'Maltipoo este un câine hibrid, rezultat din încrucișarea dintre un Maltez și un Poodle. Este un câine foarte simpatic, sociabil și iubitor, care se înțelege bine cu oamenii și cu alți câini. Are o blană moale și pufoasă, care poate fi de diferite culori.'),
 ('Poodle', 2, 'Germania/Franța', 'Poodle este un câine elegant, inteligent și versatil, care poate excela în diverse activități, cum ar fi agilitate, obediență sau terapie. Are o blană creță și hipoalergenică, care poate fi tunsă în diferite stiluri.'),
 ('Bison Maltez', 3, 'Italia', 'Bison Maltez este un câine mic, dar robust, cu un aspect de jucărie. Este un câine vesel, curios și afectuos, care se atașează foarte mult de stăpânul său. Are o blană albă și stufoasă, care nu se încurcă ușor.'),
-('Maidanez', 4, 'necunoscută', 'Maidanez este un termen folosit pentru a desemna câinii fără rasă, care trăiesc pe străzi sau în adăposturi. Este un câine adaptabil, rezistent și supraviețuitor, care poate avea diverse trăsături fizice și comportamentale, în funcție de originea și mediul său.')
+('Maidanez', 4, 'necunoscută', 'Maidanez este un termen folosit pentru a desemna câinii fără rasă, care trăiesc pe străzi sau în adăposturi. Este un câine adaptabil, rezistent și supraviețuitor, care poate avea diverse trăsături fizice și comportamentale, în funcție de originea și mediul său.');
 
 -- Inserare date în tabela Blana
 INSERT INTO [Blana] ([tip], [lungime])
@@ -24,7 +24,7 @@ VALUES
 ('fin', 'lung'),
 ('fin', 'scurt'),
 ('cret', 'lung'),
-('cret', 'scurt')
+('cret', 'scurt');
 
 -- Inserare date în tabela Caine
 INSERT INTO [Caine] ([nume], [tata_id], [mama_id], [pret], [rasa_id], [data_nastere], [blana_id])
@@ -44,7 +44,7 @@ VALUES
 -- Bonzo
 ('Bonzo', -1, -1, 0, 6, '2020-01-01', 3),
 -- Copilul lui Bonzo și Bella
-('Rexy', 10, 6, 50, 6, '2022-01-01', 1)
+('Rexy', 10, 6, 50, 6, '2022-01-01', 1);
 
 -- Inserare date în tabela Locatie
 INSERT INTO [Locatie] (tara, cod_postal, regiune, oras, strada, numar, alte_detalii)
@@ -80,7 +80,7 @@ VALUES
 -- Ana cu Rexy, Lucky și Bella
 (11, 2, DATEADD(month, 2, '2022-01-01')), -- Rexy
 (9, 2, DATEADD(month, 2, '2022-01-01')), -- Lucky
-(6, 2, DATEADD(month, 2, '2021-01-15')) -- Bella
+(6, 2, DATEADD(month, 2, '2021-01-15')); -- Bella
 
 -- Inserare date în tabela Locatie
 INSERT INTO [Locatie] (tara, cod_postal, regiune, oras, strada, numar, alte_detalii)
@@ -108,7 +108,7 @@ VALUES
 ('alb'),
 ('negru'),
 ('maro'),
-('gri')
+('gri');
 
 -- Inserare date în tabela CuloareCaine
 INSERT INTO [CuloareCaine] ([id_caine], [id_culoare], [procent_culoare])
@@ -140,7 +140,7 @@ VALUES
 (8, 1, 0.05), -- Luna, alb 5%
 (9, 2, 0.6), -- Lucky, negru 60%
 (9, 3, 0.395), -- Lucky, maro 39.5%
-(9, 1, 0.005) -- Lucky, alb 0.5%
+(9, 1, 0.005), -- Lucky, alb 0.5%
 -- Bonzo
 (10, 1, 0.45), -- Bonzo, alb 45%
 (10, 4, 0.55), -- Bonzo, gri 55%
@@ -148,7 +148,7 @@ VALUES
 (11, 4, 0.02) -- Rexy, gri 2%
 (11, 1, 0.20), -- Rexy, alb 20%
 (11, 2, 0.625), -- Rexy, negru 62.5%
-(11, 3, 0.155) -- Rexy, maro 15.5%
+(11, 3, 0.155); -- Rexy, maro 15.5%
 
 -- Inserare date în tabela Hrana
 INSERT INTO [Hrana] ([denumire], [carne], [calitate], [varsta], [talie_id])
@@ -300,4 +300,27 @@ VALUES
 ('Chappi', 'pui', 2.5, 'adult', 3), -- talie mică
 ('Chappi', 'pui', 2.5, 'senior', 1), -- talie mare
 ('Chappi', 'pui', 2.5, 'senior', 2), -- talie medie
-('Chappi', 'pui', 2.5, 'senior', 3) -- talie mică
+('Chappi', 'pui', 2.5, 'senior', 3); -- talie mică
+
+-- Insert a new location for Paris, France
+INSERT INTO [Locatie] (tara, regiune, oras, strada, numar, alte_detalii)
+VALUES
+("France", "Ile-de-France", "Paris", "Rue de la Paix", 5, "Apartment 3");
+
+
+-- Insert Francais as a new person from Paris, France, who owns Bella
+INSERT INTO [Persoana] (nume, prenume, locatie_id, telefon)
+VALUES (
+  'Francais', 
+  'Francais', 
+  (SELECT [id] FROM [Locatie] WHERE tara = 'France' AND oras = 'Paris' AND strada = 'Rue de la Paix' AND numar = 5), 
+  '+33123456789'
+);
+
+-- Insert the ownership record for Francais and Bella
+INSERT INTO [CaineDetinator] ([id_caine], [id_detinator], [an_achizitie])
+VALUES (
+  (SELECT [id_caine] FROM [Caine] WHERE [nume] = 'Bella'),
+  (SELECT [id] FROM [Persoana] WHERE nume = 'Francais' AND prenume = 'Francais'),
+  "2022-07-08"
+);
