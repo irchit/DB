@@ -9,12 +9,12 @@ VALUES
 
 INSERT INTO [Rasa] ([denumire], [talie_id], [tara_origine], [descriere_rasa])
 VALUES
-('Airedale Terrier', 1, 'Anglia', 'Airedale Terrier este cea mai mare dintre rasele de terrieri. Este un câine inteligent, curajos și loial, care se potrivește bine cu familiile active. Are nevoie de mult exercițiu fizic și mental, precum și de îngrijire regulată a blănii.'),
-('Yorkshire Terrier', 3, 'Anglia', 'Yorkshire Terrier este un câine mic, dar plin de personalitate. Este foarte afectuos, jucăuș și devotat stăpânilor săi. Are o blană lungă și mătăsoasă, care necesită periere zilnică și tuns periodic.'),
-('Maltipoo', 3, 'Statele Unite', 'Maltipoo este un câine hibrid, rezultat din încrucișarea dintre un Maltez și un Poodle. Este un câine foarte simpatic, sociabil și iubitor, care se înțelege bine cu oamenii și cu alți câini. Are o blană moale și pufoasă, care poate fi de diferite culori.'),
-('Poodle', 2, 'Germania/Franța', 'Poodle este un câine elegant, inteligent și versatil, care poate excela în diverse activități, cum ar fi agilitate, obediență sau terapie. Are o blană creță și hipoalergenică, care poate fi tunsă în diferite stiluri.'),
-('Bison Maltez', 3, 'Italia', 'Bison Maltez este un câine mic, dar robust, cu un aspect de jucărie. Este un câine vesel, curios și afectuos, care se atașează foarte mult de stăpânul său. Are o blană albă și stufoasă, care nu se încurcă ușor.'),
-('Maidanez', 4, 'necunoscută', 'Maidanez este un termen folosit pentru a desemna câinii fără rasă, care trăiesc pe străzi sau în adăposturi. Este un câine adaptabil, rezistent și supraviețuitor, care poate avea diverse trăsături fizice și comportamentale, în funcție de originea și mediul său.');
+('Airedale Terrier', 1, 'Anglia', 'Airedale Terrier este cea mai mare dintre rasele de terrieri.'),
+('Yorkshire Terrier', 3, 'Anglia', 'Yorkshire Terrier este un câine mic, dar plin de personalitate.'),
+('Maltipoo', 3, 'Statele Unite', 'Maltipoo este un câine hibrid, rezultat din încrucișarea dintre un Maltez și un Poodle.'),
+('Poodle', 2, 'Germania/Franța', 'Poodle este un câine elegant, inteligent și versatil.'),
+('Bison Maltez', 3, 'Italia', 'Bison Maltez este un câine mic, dar robust, cu un aspect de jucărie.'),
+('Maidanez', 4, 'necunoscută', 'Maidanez este un termen folosit pentru a desemna câinii fără rasă.');
 
 -- Inserare date în tabela Blana
 INSERT INTO [Blana] ([tip], [lungime])
@@ -47,20 +47,20 @@ VALUES
 ('Rexy', 10, 6, 50, 6, '2022-01-01', 1);
 
 -- Inserare date în tabela Locatie
-INSERT INTO [Locatie] (tara, cod_postal, regiune, oras, strada, numar, alte_detalii)
+INSERT INTO [Locatie] ([tara], [cod_postal], [regiune], [oras], [strada], [numar], [alte_detalii])
 VALUES
-("Romania", "010011", "Bucuresti", "Bucuresti", "Calea Victoriei", 49, "etaj 3, apartament 12"),
-("Romania", "400001", "Cluj", "Cluj-Napoca", "Bulevardul Eroilor", 21, "bl. A3, sc. B, ap. 15"),
-("Romania", "300001", "Timis", "Timisoara", "Strada Alba Iulia", 4, "bl. 7, sc. 2, ap. 34"),
-("Germania", "10117", "Berlin", "Berlin", "Unter den Linden", 77, "null");
+('Romania', '010011', 'Bucuresti', 'Bucuresti', 'Calea Victoriei', 49, 'etaj 3, apartament 12'),
+('Romania', '400001', 'Cluj', 'Cluj-Napoca', 'Bulevardul Eroilor', 21, 'bl. A3, sc. B, ap. 15'),
+('Romania', '300001', 'Timis', 'Timisoara', 'Strada Alba Iulia', 4, 'bl. 7, sc. 2, ap. 34'),
+('Germania', '10117', 'Berlin', 'Berlin', 'Unter den Linden', 77, NULL);
 
 -- Inserare date în tabela Persoana
 INSERT INTO [Persoana] (nume, prenume, locatie_id, telefon)
 VALUES
-("Popescu", "Ion", 1, "+40721234567"),
-("Ionescu", "Ana", 2, "+40739876543"),
-("Schmidt", "Hans", 4, "+49123456789"),
-("Popa", "Maria", 3, "+40745678901");
+('Popescu', 'Ion', 1, '+40721234567'),
+('Ionescu', 'Ana', 2, '+40739876543'),
+('Schmidt', 'Hans', 4, '+49123456789'),
+('Popa', 'Maria', 3, '+40745678901');
 
 -- Inserare date în tabela CaineDetinator
 INSERT INTO [CaineDetinator] ([id_caine], [id_detinator], [an_achizitie])
@@ -85,22 +85,22 @@ VALUES
 -- Inserare date în tabela Locatie
 INSERT INTO [Locatie] (tara, cod_postal, regiune, oras, strada, numar, alte_detalii)
 VALUES
-("Germania", "14193", "Berlin", "Berlin", "Am Waldsee", 12, "null");
+('Germania', '14193', 'Berlin', 'Berlin', 'Am Waldsee', 12, 'null');
 
 -- Inserare date în tabela Canisa
 INSERT INTO [Canisa] (denumire, proprietar_id, locatie_id, telefon)
 VALUES
-("Am Waldsee Hunde", 3, 5, "+49123456789");
+('Am Waldsee Hunde', 3, 5, '+49123456789');
 
 -- Inserare date în tabela Locatie
 INSERT INTO [Locatie] (tara, cod_postal, regiune, oras, strada, numar, alte_detalii)
 VALUES
-("Romania", "500001", "Brasov", "Brasov", "Strada De Mijloc", 24, "null");
+('Romania', '500001', 'Brasov', 'Brasov', 'Strada De Mijloc', 24, 'null');
 
 -- Inserare date în tabela Canisa
 INSERT INTO [Canisa] (denumire, proprietar_id, locatie_id, telefon)
 VALUES
-("Terrieri Zâmbind", 4, 6, "+40745678901");
+('Terrieri Zâmbind', 4, 6, '+40745678901');
 
 -- Inserare date în tabela Culoare
 INSERT INTO [Culoare] ([culoare])
@@ -145,7 +145,7 @@ VALUES
 (10, 1, 0.45), -- Bonzo, alb 45%
 (10, 4, 0.55), -- Bonzo, gri 55%
 -- Rexy
-(11, 4, 0.02) -- Rexy, gri 2%
+(11, 4, 0.02), -- Rexy, gri 2%
 (11, 1, 0.20), -- Rexy, alb 20%
 (11, 2, 0.625), -- Rexy, negru 62.5%
 (11, 3, 0.155); -- Rexy, maro 15.5%
@@ -305,7 +305,7 @@ VALUES
 -- Insert a new location for Paris, France
 INSERT INTO [Locatie] (tara, regiune, oras, strada, numar, alte_detalii)
 VALUES
-("France", "Ile-de-France", "Paris", "Rue de la Paix", 5, "Apartment 3");
+('France', 'Ile-de-France', 'Paris', 'Rue de la Paix', 5, 'Apartment 3');
 
 
 -- Insert Francais as a new person from Paris, France, who owns Bella
@@ -320,7 +320,7 @@ VALUES (
 -- Insert the ownership record for Francais and Bella
 INSERT INTO [CaineDetinator] ([id_caine], [id_detinator], [an_achizitie])
 VALUES (
-  (SELECT [id_caine] FROM [Caine] WHERE [nume] = 'Bella'),
+  (SELECT [id] FROM [Caine] WHERE [nume] = 'Bella'),
   (SELECT [id] FROM [Persoana] WHERE nume = 'Francais' AND prenume = 'Francais'),
-  "2022-07-08"
+  '2022-07-08'
 );
