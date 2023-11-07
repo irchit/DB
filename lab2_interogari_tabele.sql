@@ -60,7 +60,7 @@ JOIN Persoana P ON CD.id_detinator = P.id
 WHERE P.locatie_id IN (SELECT id FROM Locatie WHERE tara = 'Romania')
 ORDER BY OwnerName, OwnerSurname;
 
--- 6. Numar de tari din baza de date
+-- 6. Lista de tari din baza de date
 SELECT DISTINCT Locatie.tara as Country 
 FROM Locatie;
 
