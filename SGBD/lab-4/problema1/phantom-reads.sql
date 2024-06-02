@@ -1,0 +1,34 @@
+use Practic
+go
+
+CREATE or ALTER PROCEDURE phantom
+AS
+BEGIN
+    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+    BEGIN TRANSACTION;
+
+    SELECT COUNT(*) as [Numar Copii] FROM Copii;
+	WAITFOR DELAY '00:00:20'
+    SELECT COUNT(*) as [Numar Copii] FROM Copii;
+    COMMIT TRANSACTION;
+END
+go
+
+CREATE or ALTER PROCEDURE phantom_corrected
+AS
+BEGIN
+    SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+    BEGIN TRANSACTION;
+
+    SELECT COUNT(*) as [Numar Copii] FROM Copii;
+	WAITFOR DELAY '00:00:20'
+    SELECT COUNT(*) as [Numar Copii] FROM Copii;
+    COMMIT TRANSACTION;
+END;
+go
+
+exec phantom
+go
+
+exec phantom_corrected
+go

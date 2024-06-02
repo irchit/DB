@@ -1,0 +1,15 @@
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\lab2.exe.config
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\lab2.exe
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\lab2.pdb
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\System.Security.AccessControl.dll
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\System.Security.Permissions.dll
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\bin\Debug\System.Security.Principal.Windows.dll
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.csproj.AssemblyReference.cache
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.Form1.resources
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.Properties.Resources.resources
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.csproj.GenerateResource.cache
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.csproj.CopyComplete
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.exe
+D:\Facultate\An2\Sem2\sgbd\lab-2\lab2\obj\Debug\lab2.pdb

@@ -1,0 +1,34 @@
+use Practic
+go
+
+CREATE or ALTER PROCEDURE SelectObiecte
+AS
+BEGIN
+    SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+    BEGIN TRANSACTION;
+
+    SELECT * FROM Obiecte;
+
+    COMMIT TRANSACTION;
+END;
+GO
+
+CREATE or ALTER PROCEDURE SelectObiecte_Corrected
+AS
+BEGIN
+    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+    BEGIN TRANSACTION;
+
+    SELECT * FROM Obiecte;
+
+    COMMIT TRANSACTION;
+END;
+GO
+
+
+exec SelectObiecte;
+go
+exec SelectObiecte_Corrected;
+go
+
+

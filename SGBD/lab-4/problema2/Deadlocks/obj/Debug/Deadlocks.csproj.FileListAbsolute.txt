@@ -1,0 +1,7 @@
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\bin\Debug\Deadlocks.exe.config
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\bin\Debug\Deadlocks.exe
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\bin\Debug\Deadlocks.pdb
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\obj\Debug\Deadlocks.csproj.AssemblyReference.cache
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\obj\Debug\Deadlocks.csproj.CoreCompileInputs.cache
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\obj\Debug\Deadlocks.exe
+D:\Facultate\An2\Sem2\sgbd\lab-4\problema2\Deadlocks\obj\Debug\Deadlocks.pdb
